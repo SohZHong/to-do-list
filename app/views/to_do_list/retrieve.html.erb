@@ -1,0 +1,16 @@
+<h1>To Do List</h1>
+<ul>
+    <li>
+        <details>
+            <summary>
+                <span><%= @task.title %><span>
+                <input type="checkbox" <%= 'checked' if @task.complete %>/>
+            </summary>
+                <div><%= @task.description %></div>
+                <% if @task.complete %>
+                <div><%= @task.complete_time %></div>
+                <% end %>
+                <div>Created at: <%= @task.created_at %></div>
+        </details>
+    </li>
+</ul>
